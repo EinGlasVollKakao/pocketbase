@@ -31,7 +31,7 @@ func NewGithubProvider() *Github {
 		ctx:         context.Background(),
 		displayName: "GitHub",
 		pkce:        true, // technically is not supported yet but it is safe as the PKCE params are just ignored
-		scopes:      []string{"read:user", "user:email"},
+		scopes:      []string{"read:user"},
 		authURL:     github.Endpoint.AuthURL,
 		tokenURL:    github.Endpoint.TokenURL,
 		userInfoURL: "https://api.github.com/user",
